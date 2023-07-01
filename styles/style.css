@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Define CSS variables for colors */
+:root {
+  /* Primary color */
+  --color-primary: #d4f5dd;
+
+  /* Secondary color */
+  --color-secondary: #0d9733;
+
+  /* Gray color */
+  --color-gray: gray;
+
+  /* White color */
+  --color-white: white;
+
+  /* Black color */
+  --color-black: black;
+
+  /* Light gray color */
+  --color-light-gray: #f3f3f3;
+
+  /* Dark gray color */
+  --color-dark-gray: #343434;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  background-color: red;
+}
+header a {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.container-wide {
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+}
+.text-center {
+  padding-top: 4rem;
+}
+
+section {
+  width: 100%;
+}
+.section-one {
+  height: 260vh;
+}
+.section-one main {
+  background-color: var(--color-secondary);
+  height: 1007px;
+  border-radius: 38px;
+  width: 100%;
+  color: var(--color-white);
+}
+.section-one main h1 {
+  font-size: 55px;
+  line-height: 74.54px;
+  font-weight: 700;
+}
+.section-one main p {
+  font-size: 24px;
+  font-weight: 400;
+}
+.app-screen {
+  width: 1083px;
+  margin: 0 auto;
+  padding-top: 8rem;
+}
+.main-holder {
+  height: 87%;
+}
+
+.custom-gap {
+  margin-right: 1rem;
+  border: none;
+  background-color: transparent;
+}
+/* /////////////////////////////////////////////////////////////////// */
+.section-two {
+  background-color: var(--color-primary);
+}
+.section-two .container-wide h1 {
+  font-size: 55px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+.section-two .container-wide p {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 45px;
+}
+.section-two .container-wide h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 45px;
+  text-align: left;
+}
+.child-div {
+  background-color: white;
+  color: #0d9733;
+  border-radius: 20px;
+  width: 28rem;
+  padding: 2rem;
+}
+.service {
+  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+/* //////////////////////////////////// */
+.section-three .container-wide {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+.image-holder {
+  background-color: var(--color-light-gray);
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  border-radius: 30px;
+}
+.image-holder-last {
+  background-color: var(--color-light-gray);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+  border-radius: 30px;
+}
+.pr {
+  padding-right: 122px;
+}
+.pl {
+  text-align: right;
+  padding-left: 122px;
+}
+/* //////////////////////////////////////////// */
+.section-four {
+  background-color: var(--color-secondary);
+
+  color: var(--color-white);
+}
+.section-four .image-holder {
+  background-color: transparent;
+}
+.section-four .image-holder img {
+  width: 1000px;
+  height: 100%;
+}
+/* ///////////////////////////////// */
+.section-five {
+  height: 110vh;
+}
+.section-five h4 {
+  margin: 0 1rem;
+}
+.section-five sub {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+.ptop {
+  padding-top: 5rem;
+  overflow: hidden;
+}
+.testimony {
+  background-color: #f0f0f0;
+
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+
+.testimony-image {
+  border-radius: 50%;
+  width: 82px;
+  height: 82px;
+  margin-right: 2rem;
+}
+.testimony-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.testimony .p {
+  color: #7e7e7e;
+  text-align: right;
+}
+/* /////////////////////////////////// */
+.input {
+  background-color: var(--color-light-gray);
+  border-radius: 10px;
+}
+.input input {
+  margin-right: 1rem;
+}
+.input .btn {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+/* /////////////////////////////////////////// */
+.section-seven {
+}
+.picture {
+  width: 150px;
+  height: 150px;
+}
+.join {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+.description p {
+  padding: 0 2rem;
+}
+/* //////////////////////////////// */
+footer {
+  height: 50vh;
+  background-color: black;
+  color: white;
+}
+footer .container-wide{
+  padding: 5rem;
+}
+.footer-img {
+  width: 430px;
+  height: 92px;
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: 18px;
+}
+.footer-img img{
+  width: 200px;
+}
+.ml{
+  margin-left: 0.2rem;
+}
+.fourh{
+width: 70px;
+height: 70px;
+margin-right: 2rem;
+}
+.fourh img{
+  width: 100%;
+  height: 100%;
+  margin-left: 1rem;
+}
+.box-2{
+  align-items: center;
+}
+footer i{
+  font-size: 44px;
+  margin-left: 1rem;
+}
