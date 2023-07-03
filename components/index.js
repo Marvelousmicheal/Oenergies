@@ -19,6 +19,29 @@ const textCenterElements = document.querySelectorAll(".text-center");
 const prElements = document.querySelectorAll(".pr");
 const plElement = document.querySelector(".pl");
 
+// Select the testimony container element
+const testimonyContainer = document.querySelector(".testimony-container");
+
+// Select all the testimonies within the container
+const testimony = document.querySelectorAll(".testimony");
+
+// Initialize the current testimony index
+let currenttestimony = 2;
+
+// Declare a timeout variable
+let timeout2;
+// Select the service container element
+const serviesContainer = document.querySelector(".service");
+
+// Select all the child divs within the service container
+const service = document.querySelectorAll(".child-div");
+
+// Initialize the current service index
+let currentservice = 3;
+
+// Declare a timeout variable
+let timeout;
+
 let idx = 0;
 
 update();
@@ -111,48 +134,63 @@ setTimeout(() => {
 }, 2000);
 
 ////////////////
-const serviesContainer = document.querySelector(".service");
-const service = document.querySelectorAll(".child-div");
 
-let currentservice = 3;
-let timeout;
-
+// Function to update the services
 const updateService = () => {
+  // Check if the current service index exceeds the total number of services
   if (currentservice > service.length) {
+    // Reset the current service index to the first service
     currentservice = 1;
   } else if (currentservice < 3) {
+    // If the current service index is less than 3, set it to the last service
     currentservice = service.length;
   }
+
+  // Move the service container horizontally to display the current service
   serviesContainer.style.transform = `translateX(-${
     (currentservice - 1) * 120
   }px)`;
 
+  // Set a timeout to automatically advance to the next service after 5 seconds
   timeout = setTimeout(() => {
+    // Increment the current service index
     currentservice++;
+
+    // Call the updateService function again to display the next service
     updateService();
   }, 5000);
 };
+
+// Call the updateService function to start the service carousel/slider
 updateService();
+
 //////////////////////////////////////
-const testimonyContainer = document.querySelector(".testimony-container");
-const testimony = document.querySelectorAll(".testimony");
 
-let currenttestimony = 2;
-let timeout2;
-
+// Function to update the testimonies
 const updateTest = () => {
+  // Check if the current testimony index exceeds the total number of testimonies
   if (currenttestimony > testimony.length) {
-   currenttestimony = 1;
+    // Reset the current testimony index to the first testimony
+    currenttestimony = 1;
   } else if (currenttestimony < 2) {
-   currenttestimony = testimony.length;
+    // If the current testimony index is less than 2, set it to the last testimony
+    currenttestimony = testimony.length;
   }
+
+  // Move the testimony container vertically to display the current testimony
   testimonyContainer.style.transform = `translateY(-${
     (currenttestimony - 1) * 120
   }px)`;
 
+  // Set a timeout to automatically advance to the next testimony after 5 seconds
   timeout2 = setTimeout(() => {
-   currenttestimony++;
-   updateTest();
+    // Increment the current testimony index
+    currenttestimony++;
+
+    // Call the updateTest function again to display the next testimony
+    updateTest();
   }, 5000);
 };
+
+// Call the updateTest function to start the testimonial carousel/slider
 updateTest();
