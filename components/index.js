@@ -109,3 +109,50 @@ setTimeout(() => {
     }
   );
 }, 2000);
+
+////////////////
+const serviesContainer = document.querySelector(".service");
+const service = document.querySelectorAll(".child-div");
+
+let currentservice = 3;
+let timeout;
+
+const updateService = () => {
+  if (currentservice > service.length) {
+    currentservice = 1;
+  } else if (currentservice < 3) {
+    currentservice = service.length;
+  }
+  serviesContainer.style.transform = `translateX(-${
+    (currentservice - 1) * 120
+  }px)`;
+
+  timeout = setTimeout(() => {
+    currentservice++;
+    updateService();
+  }, 5000);
+};
+updateService();
+//////////////////////////////////////
+const testimonyContainer = document.querySelector(".testimony-container");
+const testimony = document.querySelectorAll(".testimony");
+
+let currenttestimony = 2;
+let timeout2;
+
+const updateTest = () => {
+  if (currenttestimony > testimony.length) {
+   currenttestimony = 1;
+  } else if (currenttestimony < 2) {
+   currenttestimony = testimony.length;
+  }
+  testimonyContainer.style.transform = `translateY(-${
+    (currenttestimony - 1) * 120
+  }px)`;
+
+  timeout2 = setTimeout(() => {
+   currenttestimony++;
+   updateTest();
+  }, 5000);
+};
+updateTest();

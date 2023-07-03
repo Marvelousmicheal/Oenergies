@@ -85,6 +85,7 @@ section {
 /* /////////////////////////////////////////////////////////////////// */
 .section-two {
   background-color: var(--color-primary);
+  overflow-x: hidden;
 }
 .section-two .container-wide h1 {
   font-size: 55px;
@@ -107,18 +108,27 @@ section {
   background-color: white;
   color: #0d9733;
   border-radius: 20px;
-  width: 28rem;
+  width: 24rem;
   padding: 2rem;
 }
 .service {
   gap: 2rem;
   display: flex;
-  justify-content: space-between;
+transition: all ease-in-out 2s;
+  width: 130%;
 }
 /* //////////////////////////////////// */
 .section-three .container-wide {
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+.section-three p {
+ 
+  font-size: 19px;
+}
+.section-three h1 {
+ 
+  font-size: 40px;
 }
 .image-holder {
   background-color: var(--color-light-gray);
@@ -169,6 +179,9 @@ section {
 .ptop {
   padding-top: 5rem;
   overflow: hidden;
+}
+.testimony-container{
+  transition: all ease-in-out 2s;
 }
 .testimony {
   background-color: #f0f0f0;
@@ -271,6 +284,7 @@ footer i {
   justify-content: center;
   align-items: center;
   transition: all 1s ease-in-out;
+  pointer-events: none;
 }
 .loader {
   text-align: center;
