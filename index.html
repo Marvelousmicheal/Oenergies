@@ -21,6 +21,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
     <script src="./components/index.js" defer></script>
+    <script src="./components/slider.js" defer></script>
     <title> OEnergy Landing page</title>
   </head>
   <body>
@@ -46,11 +47,29 @@
   </a>
 
   <ul class="navbar-nav mx-auto">
-    <li class="nav-item me-5">
-      <a href="#" class="nav-link active">services <span><i class="fa-solid fa-chevron-down"></i></span></a>
+    <li class="nav-item me-7 " data-bs-toggle="dropdown" aria-expanded="false">
+ <a class="nav-link ">Company <span><i class="fa-solid fa-chevron-down"></i></span></a>
+
     </li>
+
+
+
+ <ul class="dropdown-menu" >
+   <li ><a class="dropdown-item" href="AboutUs.html">About us</a></li>
+   <li><a class="dropdown-item" href="#">Terms and conditions</a></li>
+   <li><a class="dropdown-item" href="#">Privacy policy</a></li>
+  </ul>
+
+
+
+
+
     <li class="nav-item me-7">
-      <a href="#" class="nav-link">company<span><i class="fa-solid fa-chevron-down"></i></span></a>
+      <a href="AboutUs.html" class="nav-link">Support</a>
+    </li>
+    
+    <li class="nav-item me-7">
+      <a href="#" class="nav-link">Careers</a>
     </li>
   </ul>
 
@@ -67,7 +86,7 @@
         <div class="container-wide ">
            <div class="main-holder">
              <main>
-                 <div class="text-center">
+                 <div class="taxt-center">
         <h1 >Never Queue Again!<br>Order For Gas & Petroleum<br>With Ease.</h1>
         <p>OEnergy App allows you to order cooking gas, petrol, kerosene from any<br> merchant around you conveniently and get it delivered within fifteen minutes.</p>
       </div>
@@ -105,7 +124,8 @@ products at your fingertips</p>
         </div>
 
          <div class="service p-5">
-      <div class=" child-div ">
+      <div class="innerservice">
+        <div class=" child-div ">
   <div class="row">
     <div class="col ">
       <img src="/images/Okec EnergiesConnection 1.png" alt="Image" class="img-fluid">
@@ -187,6 +207,7 @@ quantity before it gets to you. </p>
     </div>
   </div>
 
+      </div>
       </div>
     
     </div>
@@ -303,7 +324,8 @@ quantity before it gets to you. </p>
 
     <!-- Right Section -->
     <div class="col-lg-6 testimony-container">
-      <!-- First Row -->
+     <div class="testimony-inner">
+ <!-- First Row -->
       <div class="row d-flex flex-column testimony p-5">
         <!-- First Column -->
         <div class="col-6 w-100 ">
@@ -358,6 +380,7 @@ quantity before it gets to you. </p>
            </div>
         </div>
       </div>
+     </div>
     </div>
   </div>
 
