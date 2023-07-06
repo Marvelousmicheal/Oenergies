@@ -28,6 +28,9 @@
   margin: 0 auto;
   padding-top: 8rem;
 }
+.app-screen img {
+  width: 100%;
+}
 .main-holder {
   height: 87%;
 }
@@ -45,6 +48,7 @@
 }
 .section-two .container-wide {
   position: relative;
+  height: inherit;
 }
 .section-two .container-wide h1 {
   font-size: 55px;
@@ -109,6 +113,14 @@
   padding-top: 4rem;
   border-radius: 30px;
 }
+.image-holder div,
+.image-holder-last div {
+  width: 90%;
+}
+.image-holder div img,
+.image-holder-last div img {
+  width: 100%;
+}
 .image-holder-last {
   background-color: var(--color-light-gray);
   display: flex;
@@ -139,7 +151,6 @@
 /* ///////////////////////////////// */
 .section-five {
   height: 43rem;
- 
 }
 .section-five h4 {
   margin: 0 1rem;
@@ -151,10 +162,10 @@
 }
 .ptop {
   padding-top: 5rem;
-  overflow: hidden;
 }
 .testimony-container {
   position: relative;
+  overflow: hidden;
 }
 .testimony-inner {
   transition: all ease-in-out 0.3s;
@@ -162,12 +173,14 @@
   top: 0;
   left: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .testimony {
   background-color: #f0f0f0;
-width: 100%;
+  width: 100%;
   border-radius: 20px;
-  margin-top: 1rem;
 }
 
 .testimony-image {
@@ -212,7 +225,6 @@ width: 100%;
 }
 /* //////////////////////////////// */
 footer {
-  
   background-color: black;
   color: white;
 }
@@ -293,4 +305,158 @@ footer i {
   border-radius: 7px;
   position: absolute;
   left: 0;
+}
+/* //////////////////////////////////////////////// */
+/* Extra small devices (phones) */
+
+
+@media only screen and (max-width: 489px){
+.service {
+  height:60% !important;
+    top: 39% !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  /* CSS styles for extra small devices */
+  .innerservice {
+    width: 370% !important;
+  }
+  .app-screen img {
+    height: 450px;
+  }
+  .custom-btn img {
+    width: 150px;
+  }
+  .btn-group {
+    padding: 0 1rem;
+  }
+  .section-two {
+    height: 120vh !important ;
+  }
+  .service {
+    left: 0%;
+    top: 35%;
+  }
+  .ptop {
+    display: block;
+    
+   
+  }
+  .testimony-container {
+    position: relative;
+
+    height: 500px;
+  }
+
+}
+
+/* Small devices (tablets) */
+@media only screen and (max-width: 768px) {
+  /* CSS styles for small devices */
+  .custom-flex {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .image-holder div {
+    width: 500px;
+  }
+  .image-holder-last div {
+    width: 500px;
+  }
+  .custom-width {
+    width: 100%;
+  }
+  .order:nth-child(1) {
+    order: 2;
+  }
+  .order:nth-child(2) {
+    order: 1;
+  }
+  .pl {
+    text-align: left;
+    padding: 0;
+  }
+  .pr {
+    padding: 0;
+  }
+  .custommb {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Medium devices (desktops) */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  /* CSS styles for medium devices */
+  .section-five {
+    height: 88vh;
+  }
+  .section-three .container-wide {
+    padding-bottom: 4rem;
+  }
+  .custom-align {
+    justify-content: center;
+  }
+  .ptop {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimony-container {
+    position: relative;
+
+    height: 500px;
+  }
+  .custom-h {
+    height: 200px !important;
+    background-color: pink;
+  }
+  .innerservice {
+    width: 199% !important;
+  }
+  .section-two {
+    height: 130vh !important;
+  }
+  .service {
+    left: 0%;
+    top: 30%;
+  }
+}
+
+/* Large devices (large desktops) */
+@media only screen and (max-width: 1200px) {
+  /* CSS styles for large devices */
+
+  .app-screen {
+    width: 95%;
+    padding-top: 2rem;
+    margin: 0 auto;
+  }
+
+  .main-holder {
+    height: 70rem;
+  }
+  .section-one {
+    height: auto;
+  }
+  .custom-margin {
+    margin: 2rem 0 4rem 0;
+  }
+  /* ////////////////////////////// */
+  .section-two {
+    height: 100vh;
+  }
+  .service {
+    height: 67%;
+  }
+  .innerservice {
+    width: 151%;
+  }
+  /* /////////////////////////// */
+  .testimony {
+    padding: 1rem !important;
+  }
+}
+
+/* Extra large devices (extra-large desktops) */
+@media only screen and (min-width: 1201px) {
+  /* CSS styles for extra large devices */
 }
