@@ -309,11 +309,16 @@ footer i {
 /* //////////////////////////////////////////////// */
 /* Extra small devices (phones) */
 
-
-@media only screen and (max-width: 489px){
-.service {
-  height:60% !important;
-    top: 39% !important;
+@media only screen and (max-width: 489px) {
+  .taxt-center {
+    padding: 0 0.7rem;
+  }
+  .service {
+    height: 60% !important;
+    top: 42% !important;
+  }
+  .btn-group {
+    margin: 6rem;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -339,15 +344,12 @@ footer i {
   }
   .ptop {
     display: block;
-    
-   
   }
   .testimony-container {
     position: relative;
 
     height: 500px;
   }
-
 }
 
 /* Small devices (tablets) */
