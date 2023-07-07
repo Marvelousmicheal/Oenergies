@@ -127,3 +127,20 @@ setTimeout(() => {
 
 //////////////////////////////////////
 
+const navBarOpen = document.querySelector(".nav-bar");
+const navBarClose = document.querySelector(".close");
+const aside = document.querySelector(".navbar-nav");
+
+navBarOpen.addEventListener("click", () => myFunc("open"));
+navBarClose.addEventListener("click", () => myFunc("close"));
+
+const myFunc = (navCondition) => {
+  if (navCondition === "open") {
+    aside.classList.add("show");
+    navBarOpen.classList.add("show");
+  } else if (navCondition === "close") {
+    navBarOpen.classList.remove("show");
+    aside.classList.remove("show");
+    navBarClose.classList.add("show");
+  }
+};
