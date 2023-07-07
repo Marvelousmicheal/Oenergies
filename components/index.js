@@ -57,7 +57,6 @@ setTimeout(() => {
     y: 0,
     ease: "power2.out",
   });
-  
 
   // Loop through each text-center element
   textCenterElements.forEach((textCenter) => {
@@ -128,19 +127,20 @@ setTimeout(() => {
 //////////////////////////////////////
 
 const navBarOpen = document.querySelector(".nav-bar");
-const navBarClose = document.querySelector(".close");
 const aside = document.querySelector(".navbar-nav");
+let clicked = false;
 
-navBarOpen.addEventListener("click", () => myFunc("open"));
-navBarClose.addEventListener("click", () => myFunc("close"));
-
-const myFunc = (navCondition) => {
-  if (navCondition === "open") {
+const myFunc = () => {
+  if (clicked) {
     aside.classList.add("show");
     navBarOpen.classList.add("show");
-  } else if (navCondition === "close") {
+    clicked = false;
+  } else {
     navBarOpen.classList.remove("show");
     aside.classList.remove("show");
-    navBarClose.classList.add("show");
+    clicked = true;
   }
 };
+
+navBarOpen.addEventListener("click", myFunc);
+myFunc();
