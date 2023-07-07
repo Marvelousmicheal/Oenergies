@@ -5,13 +5,40 @@ const serviceContainer = document.querySelector(".service");
 const service = document.querySelector(".innerservice");
 
 let isDragging = false;
-let startx;
+let startX;
 let startXOffset;
+
+// Event listener for touch start on the service container
+serviceContainer.addEventListener("touchstart", (e) => {
+  isDragging = true;
+  startX = e.touches[0].clientX;
+  startXOffset = service.offsetLeft;
+  serviceContainer.style.cursor = "grabbing";
+});
+
+// Event listener for touch move on the service container
+serviceContainer.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+
+  const newX = startXOffset + e.touches[0].clientX - startX;
+
+  // Use requestAnimationFrame for smoother animation
+  requestAnimationFrame(() => {
+    updatePosition(newX);
+  });
+});
+
+// Event listener for touch end on the window
+window.addEventListener("touchend", () => {
+  isDragging = false;
+  serviceContainer.style.cursor = "grab";
+});
 
 // Event listener for when the mouse button is pressed down on the service container
 serviceContainer.addEventListener("mousedown", (e) => {
   isDragging = true;
-  startx = e.clientX;
+  startX = e.clientX;
   startXOffset = service.offsetLeft;
   serviceContainer.style.cursor = "grabbing";
 });
@@ -38,7 +65,7 @@ serviceContainer.addEventListener("mousemove", (e) => {
   if (!isDragging) return;
   e.preventDefault();
 
-  const newX = startXOffset + e.clientX - startx;
+  const newX = startXOffset + e.clientX - startX;
 
   // Use requestAnimationFrame for smoother animation
   requestAnimationFrame(() => {
@@ -48,8 +75,8 @@ serviceContainer.addEventListener("mousemove", (e) => {
 
 // Function to check and correct the boundary of the service element within the service container
 function checkBoundary() {
-  let outer = serviceContainer.getBoundingClientRect();
-  let inner = service.getBoundingClientRect();
+  const outer = serviceContainer.getBoundingClientRect();
+  const inner = service.getBoundingClientRect();
 
   // If the service element exceeds the left boundary, reset its position to the leftmost edge
   if (inner.left < outer.left) {
@@ -67,63 +94,49 @@ const testimonyContainer = document.querySelector(".testimony-container");
 // Select the testimony inner element
 const testimonyInner = document.querySelector(".testimony-inner");
 
-// Variables to store initial state and positions
-let starty;
+
+let startY;
 let startYOffset;
 
-// Event listener for mouse down on the testimony inner element
-testimonyInner.addEventListener("mousedown", (e) => {
-  // Update the initial state and positions
-  pressed = true;
-  starty = e.clientY;
+// Event listener for touch start on the testimony inner element
+testimonyInner.addEventListener("touchstart", (e) => {
+  isDragging = true;
+  startY = e.touches[0].clientY;
   startYOffset = testimonyInner.offsetTop;
   testimonyInner.style.cursor = "grabbing";
 });
 
-// Event listener for mouse enter on the testimony inner element
-testimonyInner.addEventListener("mouseenter", () => {
-  testimonyInner.style.cursor = "grab";
-});
-
-// Event listener for mouse up anywhere in the window
-window.addEventListener("mouseup", () => {
-  pressed = false;
-  testimonyInner.style.cursor = "grab";
-});
-
-// Event listener for mouse move on the testimony container element
-testimonyContainer.addEventListener("mousemove", (e) => {
-  if (!pressed) return; // If mouse button is not pressed, return
-
+// Event listener for touch move on the testimony container element
+testimonyContainer.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
   e.preventDefault();
 
-  // Calculate the new y-coordinate based on initial positions and mouse movement
-  const newY = startYOffset + e.clientY - starty;
+  const newY = startYOffset + e.touches[0].clientY - startY;
 
   // Update the top position of the testimony inner element
   testimonyInner.style.top = `${newY}px`;
 
   // Check and adjust boundaries
-  checkBoundary2();
+  checkBoundary();
+});
+
+// Event listener for touch end on the window
+window.addEventListener("touchend", () => {
+  isDragging = false;
+  testimonyInner.style.cursor = "grab";
 });
 
 // Function to check and adjust the boundaries of the testimony inner element
-function checkBoundary2() {
-  // Get the boundaries of the testimony container and testimony inner elements
-  let outer = testimonyContainer.getBoundingClientRect();
-  let inner = testimonyInner.getBoundingClientRect();
+function checkBoundary() {
+  const outer = testimonyContainer.getBoundingClientRect();
+  const inner = testimonyInner.getBoundingClientRect();
 
   // Check if the top position is outside the container
-  if (parseInt(testimonyInner.style.top) > 0) {
-    testimonyInner.style.top = "0px";
+  if (inner.top > outer.top) {
+    testimonyInner.style.top = `${outer.top}px`;
   }
   // Check if the bottom of the testimony inner element is below the container
   else if (inner.bottom < outer.bottom) {
-    testimonyInner.style.top = `${outer.height - inner.height}px`;
+    testimonyInner.style.top = `${outer.bottom - inner.height}px`;
   }
 }
-
-// Example explained for a 7-year-old:
-// Imagine you have a box (testimony container) with a smaller box (testimony inner) inside it.
-// When you press and hold the smaller box and move your mouse, the smaller box will move up and down inside the bigger box.
-// But we don't want the
