@@ -2,9 +2,9 @@ import React from "react";
 import { images } from "../data/imageDate";
 import Buttons from "../components/Buttons";
 import Slider from "../components/Slider";
-import SecondReason from "../components/secondReason";
 import Reasons from "../components/Reasons";
 import Carrers from "../components/Carrers";
+import LeftReason from "../components/LeftReason";
 
 function Home() {
   const selectedImage1 = images[14];
@@ -20,7 +20,7 @@ function Home() {
   const selectedImage11 = images[18];
   const selectedImage12 = images[19];
   const selectedImage13 = images[4];
-  const selectedImage14 = images[5];
+  // const selectedImage14 = images[5];
   return (
     <>
       <section>
@@ -129,7 +129,8 @@ function Home() {
           />
 
           {/* -----second-reason---- */}
-          <SecondReason
+          
+          <LeftReason
             imageData={selectedImage7}
             headingText={"Track Your Order"}
             paragraphText={

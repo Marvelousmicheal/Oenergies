@@ -1,9 +1,9 @@
 import React from 'react'
 
-function SecondReason(props) {
-  const { imageData, headingText, paragraphText } = props;
+function LeftReason(props) {
+     const { imageData, headingText, paragraphText } = props;
   return (
-    <>
+   <>
       <div className="flex flex-wrap justify-between items-center mb-8 ">
         <div className="lg:w-[50%] lg:order-2">
           <h1 className="font-semibold text-[43px]  text-left my-4 ">
@@ -18,7 +18,7 @@ function SecondReason(props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default SecondReason
+export default LeftReason
