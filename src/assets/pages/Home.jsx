@@ -23,7 +23,7 @@ function Home() {
   const selectedImage13 = images[4];
   const selectedImage14 = images[5];
   const totalStars = 5;
-  const rating = 4; // Rating of the stars (can be dynamic or from data)
+  const rating = 4; 
   return (
     <>
       <section>
@@ -31,7 +31,7 @@ function Home() {
           <div className="h-[87%]">
             <main className="bg-[#0d9733] lg:h-[1007px] rounded-3xl text-white  md:px-0 px-4 h-full  ">
               <div className="pt-[4rem]  space-y-5">
-                <h1 className=" text-4xl leading-10 lg:text-[55px] font-bold lg:leading-[4rem] md:text-center text-j">
+                <h1 className=" text-4xl leading-10 lg:text-[55px] font-bold lg:leading-[4rem] md:text-center">
                   Never Queue Again!
                   <br className="hidden md:block" /> Refill Your Cooking Gas,
                   Fuel or
