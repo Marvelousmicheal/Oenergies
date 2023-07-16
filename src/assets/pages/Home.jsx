@@ -5,6 +5,7 @@ import Slider from "../components/Slider";
 import Reasons from "../components/Reasons";
 import Carrers from "../components/Carrers";
 import LeftReason from "../components/LeftReason";
+import { FaStar } from "react-icons/fa";
 
 function Home() {
   const selectedImage1 = images[14];
@@ -20,7 +21,9 @@ function Home() {
   const selectedImage11 = images[18];
   const selectedImage12 = images[19];
   const selectedImage13 = images[4];
-  // const selectedImage14 = images[5];
+  const selectedImage14 = images[5];
+  const totalStars = 5;
+  const rating = 4; // Rating of the stars (can be dynamic or from data)
   return (
     <>
       <section>
@@ -129,7 +132,7 @@ function Home() {
           />
 
           {/* -----second-reason---- */}
-          
+
           <LeftReason
             imageData={selectedImage7}
             headingText={"Track Your Order"}
@@ -240,17 +243,47 @@ function Home() {
 
       {/* section-eight */}
       <section className="lg:pt-12 py-10">
-        <div className="container mx-auto lg:px-0 px-4">
+        <div className="container mx-auto lg:px-0 px-4 space-x-8">
           <h2 className="text-3xl lg:text-[55px] font-bold lg:leading-[4rem] text-center ">
             Our User Review
           </h2>
-          <div class="flex">
-            <img src={selectedImage13.image} alt={selectedImage13.alt} />
+          <div class="flex space-x-8 items-center">
+            <img
+              src={selectedImage14.image}
+              alt={selectedImage14.alt}
+              className="w-[60px] lg:w-auto"
+            />
 
-            <h4>
-              4.5<sub>/rating</sub>
-            </h4>
-            <div class="stars "></div>
+            <h4 className="lg:text-3xl text-xl font-semibold">4.2/5 rating</h4>
+            <div class="flex">
+              {[...Array(totalStars)].map((_, index) => (
+                <FaStar
+                  key={index}
+                  className={`lg:text-3xl text-base ${
+                    index < rating ? "text-green-500" : "text-gray-500"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+          <div class="flex space-x-8 items-center">
+            <img
+              src={selectedImage13.image}
+              alt={selectedImage13.alt}
+              className="w-[60px] lg:w-auto"
+            />
+
+            <h4 className="lg:text-3xl text-xl font-semibold">4.6/5 rating</h4>
+            <div class="flex">
+              {[...Array(totalStars)].map((_, index) => (
+                <FaStar
+                  key={index}
+                  className={`lg:text-3xl text-base  ${
+                    index < rating ? "text-green-500" : "text-gray-500"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
