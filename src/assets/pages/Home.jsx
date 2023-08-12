@@ -6,6 +6,7 @@ import Reasons from "../components/Reasons";
 import Carrers from "../components/Carrers";
 import LeftReason from "../components/LeftReason";
 import { FaStar } from "react-icons/fa";
+import Download from "../components/Download";
 
 function Home() {
   const selectedImage1 = images[14];
@@ -16,7 +17,7 @@ function Home() {
   const selectedImage6 = images[6];
   const selectedImage7 = images[8];
   const selectedImage8 = images[7];
-  const selectedImage9 = images[15];
+ 
   const selectedImage10 = images[16];
   const selectedImage11 = images[18];
   const selectedImage12 = images[19];
@@ -154,26 +155,7 @@ function Home() {
       </section>
 
       {/* <!-- Section Four --> */}
-      <section className="bg-[#0d9733] lg:pt-32 pt-10">
-        <div className="container mx-auto lg:px-0 px-4">
-          <div className="text-white">
-            <h1 className="text-4xl leading-10 lg:text-[55px] font-bold lg:leading-[4rem] text-center  ">
-              Download The OEnergy App
-            </h1>
-            <p className="text-lg lg:text-2xl font-normal text-center mt-4 mb-8">
-              Register and start ordering in less than 2 minutes.
-            </p>
-          </div>
-
-          <div className="flex justify-center">
-            <Buttons />
-          </div>
-
-          <div className=" flex lg:w-[1083px] md:aspect-w-16 md:aspect-h-9 sm:w-full  mx-auto lg:mt-14 mt-10">
-            <img src={selectedImage9.image} alt={selectedImage9.alt} />
-          </div>
-        </div>
-      </section>
+     <Download/>
 
       {/* <!-- section-five --> */}
       <section className="lg:pt-12 py-10">

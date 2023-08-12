@@ -65,7 +65,8 @@ export const images = [
     alt: "a merchant picture",
   },
   {
-    image: "17.png",
+    image: "/images/17.png",
+    alt: "the fucking global",
   },
   {
     image: "/images/18.png",
@@ -80,5 +81,21 @@ export const images = [
   },
   {
     image: "21.png",
+  },
+  {
+    image: "/images/22.png",
+    alt: "custumor group",
+  },
+  {
+    image: "/images/23.png",
+    alt: "a reliability",
+  },
+  {
+    image: "/images/24.png",
+    alt: "an idea",
+  },
+  {
+    image: "/images/25.png",
+    alt: "transparency",
   },
 ];

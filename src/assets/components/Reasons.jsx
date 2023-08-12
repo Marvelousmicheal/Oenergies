@@ -4,7 +4,7 @@ function Reasons(props) {
   const { imageData, headingText, paragraphText } = props;
   return (
     <>
-      <div className="flex flex-wrap justify-between items-center mb-8 ">
+      <div className="flex flex-wrap  lg:justify-between items-center mb-8  justify-center">
         <div className="lg:w-[50%] nth-child(2):order-2">
           <h1 className="font-semibold text-[43px]  text-left my-4">
             {headingText}

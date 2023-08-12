@@ -22,15 +22,15 @@ function Header() {
   return (
     <nav className="shadow-md">
       <div className="container mx-auto flex justify-between items-center py-6  px-4">
-        <div className="w-full lg:flex justify-between items-center lg:w-[60%] ">
+        <div className="w-full lg:flex justify-between items-center lg:w-[100%] ">
           <div className="flex justify-between  w-full lg:w-auto">
-            <a href="#">
+            <Link to="/">
               <img
                 src={selectedImage1.image}
                 alt={selectedImage1.alt}
                 className="w-[10rem]"
               />
-            </a>
+            </Link>
 
             <button
               className="inline-flex items-center justify-center border border-none text-black outline-none focus:outline-none lg:hidden "
@@ -44,18 +44,18 @@ function Header() {
             </button>
           </div>
 
-          <div className="lg:flex  mt-2 lg:mt-0">
+          <div className="lg:flex  mt-2 lg:mt-0 w-full pl-10 justify-center gap-8">
             <ul
               className={`flex flex-col lg:flex-row lg:space-x-14  text-base lg:text-2xl text-gray-600 font-medium space-y-5 lg:space-y-0
                 ${isMobile ? "flex" : " hidden lg:flex "}`}
             >
-              <li className="mt-10 lg:mt-0 relative  ">
+              {/* <li className="mt-10 lg:mt-0 relative  ">
                 <button
                   href="#"
                   className="hover:text-gray-900 outline-none focus:outline-none flex items-center"
                   onClick={handleDropdown}
                 >
-                  Company
+                  About Oenergy
                   <RiArrowDropDownLine className=" h-7 w-10 " />
                 </button>
                 <div className="">
@@ -65,7 +65,8 @@ function Header() {
                     }`}
                   >
                     <li>
-                      <a href="">About us</a>
+                      
+                      <Link to="/about">About Us</Link>
                     </li>
                     <li>
                       <a  href="#">
@@ -79,16 +80,32 @@ function Header() {
                     </li>
                   </ul>
                 </div>
+              </li> */}
+              <li>
+                <Link
+                  to="/about"
+                  className="hover:text-gray-900 font-medium text-lg"
+                >
+                  About Oenergies
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-900">
-                  Support
-                </a>
+                <Link className="hover:text-gray-900 font-medium text-lg">
+                  Creation Progress
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-900">
-                  Carreer
-                </a>
+                <Link className="hover:text-gray-900 font-medium text-lg">
+                  Prototype
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-gray-900 font-medium text-lg"
+                  to="/join-us"
+                >
+                  Join Us
+                </Link>
               </li>
             </ul>
           </div>
