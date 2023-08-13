@@ -90,7 +90,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-gray-900 font-medium text-lg">
+                <Link className="hover:text-gray-900 font-medium text-lg" to="/faq">
                   Creation Progress
                 </Link>
               </li>

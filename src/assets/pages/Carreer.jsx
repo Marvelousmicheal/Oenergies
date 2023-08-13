@@ -34,7 +34,7 @@ function Carreer() {
                 <input
                   name="location"
                   list="location"
-                  className="w-full bg-transparent pl-5 py-3 "
+                  className="w-full bg-transparent pl-5 py-3 outline-none"
                   placeholder="All"
                 />
                 <RiArrowDropDownLine className=" h-7 w-10 rounded-xl " />
@@ -55,7 +55,7 @@ function Carreer() {
                   name="position"
                   list="scripts"
                   placeholder="All"
-                  className="w-full bg-transparent pl-5 py-3 "
+                  className="w-full bg-transparent pl-5 py-3 outline-none"
                 />
                 <RiArrowDropDownLine className=" h-7 w-10 " />
               </div>
@@ -78,12 +78,12 @@ function Carreer() {
             Benefits
           </h1>
           <div className="lg:flex gap-[6rem] pt-11 md:pb-[8rem] pb-9">
-            {benefits.map((benefit) => (
+            {benefits.map((benefit,index) => (
               <div className='mb-6'>
-                <h1 className="font-bold text-[20px] lg:text-[30px] text-center mb-6">
+                <h1 className="font-bold text-[20px] lg:text-[30px] text-center mb-6" key={index}>
                   {benefit.title}
                 </h1>
-                <p className="text-center md:text-[24px] font-thin">
+                <p className="text-center md:text-[24px] " >
                   {benefit.description}
                 </p>
               </div>
